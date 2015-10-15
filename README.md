@@ -2,11 +2,12 @@
 
 [![travis](https://travis-ci.org/nowsecure/nsq-bundle.svg)](https://travis-ci.org/nowsecure/nsq-bundle)
 
-Installs a nsq bundle and exposes the following binaries
+Installs a nsq bundle and exposes the following binaries/scripts
 
 * `nsqd`
 * `nsqlookupd`
 * `nsqadmin`
+* `kill-port`
 
 ## Usage
 
@@ -42,10 +43,10 @@ Then we can add some scripts to `package.json`, e.g.
   "scripts": {
     "pretest": "nsqd &",
     "test": "tape test.js",
-    "posttest": "pkill nsqd"
+    "posttest": "kill-port"
   },
   "devDependencies": {
-    "nsq-bundle": "^1.0.0"
+    "nsq-bundle": "^1.1.0"
     "tape": "^4.2.1"
   }
 }

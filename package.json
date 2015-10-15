@@ -6,7 +6,7 @@
     "preinstall": "./install.sh",
     "pretest": "./bin/nsqd &",
     "test": "tape test.js",
-    "posttest": "pkill nsqd"
+    "posttest": "./kill-port.sh"
   },
   "keywords": [
     "nsq",
@@ -26,7 +26,8 @@
   "bin": {
     "nsqd": "bin/nsqd",
     "nsqlookupd": "bin/nsqlookupd",
-    "nsqadmin": "bin/nsqadmin"
+    "nsqadmin": "bin/nsqadmin",
+    "kill-port": "kill-port.sh"
   },
   "homepage": "https://github.com/nowsecure/nsq-bundle",
   "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
