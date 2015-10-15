@@ -13,7 +13,7 @@ test('nsqd listens on port 4151', function (t) {
 function testPort (t, port) {
   t.plan(2)
   var regexp = new RegExp(":" + port)
-  spawn('lsof', [ '-i', ':' + port ])
+  spawn('lsof', [ '-i', ':' + port ], { env: process.env })
     .on('exit', function (code) {
       t.equal(code, 0, 'lsof exited without error')
     })
