@@ -1,6 +1,6 @@
 {
   "name": "nsq-bundle",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Installs nsq for either OSX or Linux",
   "scripts": {
     "install": "./install.sh",
