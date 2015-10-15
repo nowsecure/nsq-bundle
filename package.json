@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Installs nsq for either OSX or Linux",
   "scripts": {
-    "install": "./install.sh",
+    "preinstall": "./install.sh",
     "pretest": "./bin/nsqd &",
     "test": "tape test.js",
     "posttest": "pkill nsqd"
