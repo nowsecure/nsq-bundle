@@ -1,5 +1,7 @@
 # nsq-bundle
 
+[![travis](https://travis-ci.org/nowsecure/nsq-bundle.svg)](https://travis-ci.org/nowsecure/nsq-bundle)
+
 Installs a nsq bundle and exposes the following binaries
 
 * `nsqd`
