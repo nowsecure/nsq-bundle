@@ -3,10 +3,18 @@
   "version": "0.0.0",
   "description": "Installs nsq for either OSX or Linux",
   "scripts": {
-    "install": "./install.sh"
+    "install": "./install.sh",
+    "pretest": "./bin/nsqd &",
+    "test": "tape test.js",
+    "posttest": "pkill nsqd"
   },
   "keywords": [
-    "nsq", "nsqd", "nsqlookupd", "nsqadmin", "install", "devops"
+    "nsq",
+    "nsqd",
+    "nsqlookupd",
+    "nsqadmin",
+    "install",
+    "devops"
   ],
   "repository": {
     "type": "git",
@@ -22,5 +30,9 @@
   },
   "homepage": "https://github.com/nowsecure/nsq-bundle",
   "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "bl": "^1.0.0",
+    "tape": "^4.2.1"
+  }
 }

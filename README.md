@@ -26,5 +26,30 @@ at
 [nsqd] 2015/10/14 16:55:42.114514 HTTP: listening on [::]:5151
 ```
 
+This module is also useful as a `devDependency` if you want to run `nsqd` during tests etc.
+
+```
+$ npm i nsq-bundle -D
+```
+
+Then we can add some scripts to `package.json`, e.g.
+
+```json
+{
+  "name": "mymodule",
+  "scripts": {
+    "pretest": "nsqd &",
+    "test": "tape test.js",
+    "posttest": "pkill nsqd"
+  },
+  "devDependencies": {
+    "nsq-bundle": "^1.0.0"
+    "tape": "^4.2.1"
+  }
+}
+```
+
+This is a simple setup where the `pretest` script will fire up `nsqd` before the tests and the `posttest` script will kill the `nsqd` process afterwards.
+
 ## License
 MIT
