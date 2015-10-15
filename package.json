@@ -21,6 +21,6 @@
     "nsqadmin": "bin/nsqadmin"
   },
   "homepage": "https://github.com/nowsecure/nsq-bundle",
-  "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>,
+  "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
   "license": "MIT"
 }
