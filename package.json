@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "Installs nsq for either OSX or Linux",
   "scripts": {
-    "preinstall": "./install.sh",
-    "pretest": "./bin/nsqd &",
+    "postinstall": "./install.js",
+    "pretest": "./bin/nsqd -tcp-address=:5150 -http-address=:5151 &",
     "test": "tape test.js",
-    "posttest": "./kill-port.sh"
+    "posttest": "./kill-port.sh 5150"
   },
   "keywords": [
     "nsq",
@@ -33,7 +33,12 @@
   "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
   "license": "MIT",
   "devDependencies": {
-    "bl": "^1.0.0",
     "tape": "^4.2.1"
+  },
+  "dependencies": {
+    "expand-template": "^1.0.0",
+    "pump": "^1.0.0",
+    "simple-get": "^1.4.3",
+    "tar-fs": "^1.8.1"
   }
 }
