@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-var path = require('path')
 var expand = require('expand-template')()
 var get = require('simple-get')
 var pump = require('pump')
@@ -18,8 +17,9 @@ console.log('requesting', url)
 
 var req = get(url, function (err, res) {
   if (err) return onerror(err)
-  if (res.statusCode !== 200)
+  if (res.statusCode !== 200) {
     return onerror(new Error('http error ' + res.statusCode))
+  }
 
   var tarStream = tar.extract('bin', {
     readable: true,
