@@ -46,7 +46,7 @@ Then we can add some scripts to `package.json`, e.g.
     "posttest": "kill-port"
   },
   "devDependencies": {
-    "nsq-bundle": "^1.1.0"
+    "nsq-bundle": "^1.1.0",
     "tape": "^4.2.1"
   }
 }
