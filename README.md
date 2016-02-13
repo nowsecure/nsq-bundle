@@ -41,9 +41,9 @@ Then we can add some scripts to `package.json`, e.g.
 {
   "name": "mymodule",
   "scripts": {
-    "pretest": "nsqd &",
+    "pretest": "nsqd -tcp-address=:5150 -http-address=:5151 &",
     "test": "tape test.js",
-    "posttest": "kill-port"
+    "posttest": "kill-port 5150"
   },
   "devDependencies": {
     "nsq-bundle": "^1.1.0",
